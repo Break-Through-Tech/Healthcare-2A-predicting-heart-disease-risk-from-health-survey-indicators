@@ -11,7 +11,7 @@
 | Grace Williams   | @GraceCWilliams | TBD                                                                      |
 | Rachel Saini     | @               | TBD                                                                      |
 | Eunjae Lee       | @               | TBD                                                                      |
-| Jasraj Baweja    | @               | TBD                                                                      |
+| Jasraj Baweja    | @jasrajbaweja   | TBD                                                                      |
 | Dora Liao        | @               | TBD                                                                      |
 | Shawana Rahman   | @               | TBD                                                                      |
 
