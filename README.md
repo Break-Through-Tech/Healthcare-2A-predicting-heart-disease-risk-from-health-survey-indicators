@@ -9,11 +9,11 @@
 | Name             | GitHub Handle   | Contribution                                                             |
 |------------------|-----------------|--------------------------------------------------------------------------|
 | Grace Williams   | @GraceCWilliams | TBD                                                                      |
-| Rachel Saini     | @               | TBD                                                                      |
-| Eunjae Lee       | @               | TBD                                                                      |
+| Rachel Saini     | @rachelsaini28  | TBD                                                                      |
+| Eunjae Lee       | @Eunjae-hash    | TBD                                                                      |
 | Jasraj Baweja    | @jasrajbaweja   | TBD                                                                      |
-| Dora Liao        | @               | TBD                                                                      |
-| Shawana Rahman   | @               | TBD                                                                      |
+| Dora Liao        | @dora-liao      | TBD                                                                      |
+| Shawana Rahman   | @Shahrin43      | TBD                                                                      |
 
 ---
 
@@ -44,9 +44,8 @@
 
 **Describe:**
 
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
+Through the Break Through Tech AI Program, we have partnered with Accenture to build a supervised machine learning model that predicts whether an individual has a history of coronary heart disease or heart attack using lifestyle, demographic, and self-reported health indicators. We expect to use random forest and gradient boosting (XGBoost) and evaluate model performance primarily using PR-AUC, F1, and ROC-AUC, which are appropriate for the dataset’s substantial class imbalance. We may also explore techniques such as SMOTE to improve prediction of the minority positive class. A successful outcome for Accenture would be a well-evaluated proof-of-concept that demonstrates another example of how machine learning can be applied to healthcare risk prediction while effectively identifying the minority class and balancing predictive performance, interpretability, and responsible AI considerations.
+
 
 ---
 
@@ -54,14 +53,20 @@
 
 **You might consider describing the following (as applicable):**
 
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
+* Dataset(s) used: Indicators of Heart Disease
+* File type: CSV
+* File size: 25.19 MB
+* Data types: booleans, strings, decimals (numeric and categorical fields)
+  
+* EDA and preproccesing approaches: characterize and document every feature’s type and encoding decision, identify & handle missing data, examine correlations and their implications, analyze univariate & bivariate distributions, and produce a stratified train/validation/test split with a fixed seed. 
+
+* Insights from your Exploratory Data Analysis (EDA):
+  
+* Challenges and assumptions when working with the dataset(s): Imbalanced dataset
 
 **Potential visualizations to include:**
 
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+* Plots, charts, heatmaps, feature visualizations, sample dataset images:
 
 ---
 
@@ -69,7 +74,7 @@
 
 **You might consider describing the following (as applicable):**
 
-* Model(s) used (e.g., CNN with transfer learning, regression models)
+* Model(s) used (e.g., CNN with transfer learning, regression models): random forest and gradient boosting (XGBoost)
 * Feature selection and Hyperparameter tuning strategies
 * Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
 
