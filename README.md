@@ -13,7 +13,7 @@
 | Eunjae Lee       | @Eunjae-hash    | TBD                                                                      |
 | Jasraj Baweja    | @jasrajbaweja   | TBD                                                                      |
 | Dora Liao        | @dora-liao      | TBD                                                                      |
-| Shawana Rahman   | @Shahrin43      | TBD                                                                      |
+| Chu Wen Mo       | @jazmine366     | TBD                                                                      |
 
 ---
 
