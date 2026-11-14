@@ -165,6 +165,7 @@ Our project approaches heart disease history prediction as a supervised binary c
 - **Logistic Regression:** Establishes an interpretable baseline for comparison.
 - **Random Forest:** Captures nonlinear relationships and interactions between health indicators.
 - **Gradient Boosting (XGBoost):** Explores boosted decision trees to improve predictive performance.
+- **K-Nearest Neighbors:** A distance-based comparison model; class imbalance handled with resampling inside the training pipeline, since KNN has no class weights.
 
 **Feature selection and preprocessing strategies:**
 
@@ -205,13 +206,18 @@ Model performance is evaluated using multiple classification metrics to understa
 
 **Model comparison:**
 
-Final model performance will be documented using the held-out test set.
+All results are on the same held-out test set (88,414 rows, 5.68% positive; 60/20/20 stratified split, seed 42). Precision, recall and F1 are for the positive (heart attack) class at each model's decision threshold.
 
-| Model | Precision | Recall | F1 Score | ROC-AUC | PR-AUC |
-|---|---|---|---|---|---|
-| Logistic Regression | TBD | TBD | TBD | TBD | TBD |
-| Random Forest | TBD | TBD | TBD | TBD | TBD |
-| XGBoost | TBD | TBD | TBD | TBD | TBD |
+| Model | Precision | Recall | F1 Score | ROC-AUC | PR-AUC | Threshold | Imbalance handling | Notebook |
+|---|---|---|---|---|---|---|---|---|
+| XGBoost | 0.4462 | 0.5313 | **0.4850** | **0.8904** | **0.4318** | 0.236 (max F1 on validation) | `scale_pos_weight` | `xgboost_model.ipynb` |
+| Logistic Regression | 0.2228 | **0.7672** | 0.3453 | 0.8885 | 0.4147 | 0.5 (default) | balanced class weights | `milestone1_eda_starter.ipynb` |
+| Random Forest | **0.5974** | 0.1008 | 0.1724 | 0.8727 | 0.3933 | 0.5 (default) | balanced class weights | `milestone1_eda_starter.ipynb` |
+| K-Nearest Neighbors | 0.4052 | 0.3939 | 0.3994 | 0.8570 | 0.3432 | 0.360 (max F1 on validation) | undersampling to 1:5 | `knn_model.ipynb` |
+
+Notes for comparing:
+- ROC-AUC and PR-AUC don't depend on the threshold, so they are the fairest comparison. Precision / recall / F1 shift with the threshold: Logistic Regression and Random Forest still use the default 0.5, so their F1 would likely improve with a tuned threshold.
+- PR-AUC is `average_precision_score` for XGBoost and KNN, and `auc(recall, precision)` (trapezoidal) for Logistic Regression and Random Forest; the two can differ slightly.
 
 **Key findings:**
 
