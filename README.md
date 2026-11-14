@@ -218,6 +218,10 @@ All results are on the same held-out test set (88,414 rows, 5.68% positive; 60/2
 Notes for comparing:
 - ROC-AUC and PR-AUC don't depend on the threshold, so they are the fairest comparison. Precision / recall / F1 shift with the threshold: Logistic Regression and Random Forest still use the default 0.5, so their F1 would likely improve with a tuned threshold.
 - PR-AUC is `average_precision_score` for XGBoost and KNN, and `auc(recall, precision)` (trapezoidal) for Logistic Regression and Random Forest; the two can differ slightly.
+- LogReg --> Caught 76.7% of heart attacks
+- KNN --> Caught 34.9% of heart attacks
+- RF --> Caught 10% of heart attacks
+- XGBoost --> Caught 53.3% of heart attacks
 
 **Key findings:**
 
